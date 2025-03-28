@@ -114,36 +114,36 @@ setpath "product" "introductoryVideosUrl" "https://go.microsoft.com/fwlink/?link
 setpath "product" "keyboardShortcutsUrlLinux" "https://go.microsoft.com/fwlink/?linkid=832144"
 setpath "product" "keyboardShortcutsUrlMac" "https://go.microsoft.com/fwlink/?linkid=832143"
 setpath "product" "keyboardShortcutsUrlWin" "https://go.microsoft.com/fwlink/?linkid=832145"
-setpath "product" "licenseUrl" "https://github.com/VSCodium/vscodium/blob/master/LICENSE"
+setpath "product" "licenseUrl" "https://github.com/${GH_REPO_PATH}/blob/master/LICENSE"
 setpath_json "product" "linkProtectionTrustedDomains" '["https://open-vsx.org"]'
 setpath "product" "releaseNotesUrl" "https://go.microsoft.com/fwlink/?LinkID=533483#vscode"
-setpath "product" "reportIssueUrl" "https://github.com/VSCodium/vscodium/issues/new"
+setpath "product" "reportIssueUrl" "https://github.com/${GH_REPO_PATH}/issues/new"
 setpath "product" "requestFeatureUrl" "https://go.microsoft.com/fwlink/?LinkID=533482"
 setpath "product" "tipsAndTricksUrl" "https://go.microsoft.com/fwlink/?linkid=852118"
 setpath "product" "twitterUrl" "https://go.microsoft.com/fwlink/?LinkID=533687"
 
 if [[ "${DISABLE_UPDATE}" != "yes" ]]; then
-  setpath "product" "updateUrl" "https://raw.githubusercontent.com/VSCodium/versions/refs/heads/master"
-  setpath "product" "downloadUrl" "https://github.com/VSCodium/vscodium/releases"
+  setpath "product" "updateUrl" "https://raw.githubusercontent.com/${GH_REPO_PATH}/refs/heads/master"
+  setpath "product" "downloadUrl" "https://github.com/${GH_REPO_PATH}/releases"
 fi
 
 if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
-  setpath "product" "nameShort" "VSCodium - Insiders"
-  setpath "product" "nameLong" "VSCodium - Insiders"
+  setpath "product" "nameShort" "${APP_NAME} - Insiders"
+  setpath "product" "nameLong" "${APP_NAME} - Insiders"
   setpath "product" "applicationName" "codium-insiders"
-  setpath "product" "dataFolderName" ".vscodium-insiders"
+  setpath "product" "dataFolderName" ".${APP_NAME}-insiders"
   setpath "product" "linuxIconName" "vscodium-insiders"
   setpath "product" "quality" "insider"
   setpath "product" "urlProtocol" "vscodium-insiders"
   setpath "product" "serverApplicationName" "codium-server-insiders"
-  setpath "product" "serverDataFolderName" ".vscodium-server-insiders"
-  setpath "product" "darwinBundleIdentifier" "com.vscodium.VSCodiumInsiders"
-  setpath "product" "win32AppUserModelId" "VSCodium.VSCodiumInsiders"
-  setpath "product" "win32DirName" "VSCodium Insiders"
+  setpath "product" "serverDataFolderName" ".${APP_NAME}-server-insiders"
+  setpath "product" "darwinBundleIdentifier" "com.${APP_NAME}.${APP_NAME}Insiders"
+  setpath "product" "win32AppUserModelId" "${APP_NAME}.${APP_NAME}Insiders"
+  setpath "product" "win32DirName" "${APP_NAME} Insiders"
   setpath "product" "win32MutexName" "vscodiuminsiders"
-  setpath "product" "win32NameVersion" "VSCodium Insiders"
-  setpath "product" "win32RegValueName" "VSCodiumInsiders"
-  setpath "product" "win32ShellNameShort" "VSCodium Insiders"
+  setpath "product" "win32NameVersion" "${APP_NAME} Insiders"
+  setpath "product" "win32RegValueName" "${APP_NAME}Insiders"
+  setpath "product" "win32ShellNameShort" "${APP_NAME} Insiders"
   setpath "product" "win32AppId" "{{EF35BB36-FA7E-4BB9-B7DA-D1E09F2DA9C9}"
   setpath "product" "win32x64AppId" "{{B2E0DDB2-120E-4D34-9F7E-8C688FF839A2}"
   setpath "product" "win32arm64AppId" "{{44721278-64C6-4513-BC45-D48E07830599}"
@@ -151,21 +151,21 @@ if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
   setpath "product" "win32x64UserAppId" "{{20F79D0D-A9AC-4220-9A81-CE675FFB6B41}"
   setpath "product" "win32arm64UserAppId" "{{2E362F92-14EA-455A-9ABD-3E656BBBFE71}"
 else
-  setpath "product" "nameShort" "VSCodium"
-  setpath "product" "nameLong" "VSCodium"
-  setpath "product" "applicationName" "codium"
-  setpath "product" "linuxIconName" "vscodium"
+  setpath "product" "nameShort" "${APP_NAME}"
+  setpath "product" "nameLong" "${APP_NAME}"
+  setpath "product" "applicationName" "${APP_NAME_LC}"
+  setpath "product" "linuxIconName" "${APP_NAME_LC}"
   setpath "product" "quality" "stable"
-  setpath "product" "urlProtocol" "vscodium"
-  setpath "product" "serverApplicationName" "codium-server"
-  setpath "product" "serverDataFolderName" ".vscodium-server"
-  setpath "product" "darwinBundleIdentifier" "com.vscodium"
-  setpath "product" "win32AppUserModelId" "VSCodium.VSCodium"
-  setpath "product" "win32DirName" "VSCodium"
-  setpath "product" "win32MutexName" "vscodium"
-  setpath "product" "win32NameVersion" "VSCodium"
-  setpath "product" "win32RegValueName" "VSCodium"
-  setpath "product" "win32ShellNameShort" "VSCodium"
+  setpath "product" "urlProtocol" "${APP_NAME_LC}"
+  setpath "product" "serverApplicationName" "${APP_NAME_LC}-server"
+  setpath "product" "serverDataFolderName" ".${APP_NAME_LC}-server"
+  setpath "product" "darwinBundleIdentifier" "com.${APP_NAME_LC}"
+  setpath "product" "win32AppUserModelId" "${APP_NAME}.${APP_NAME}"
+  setpath "product" "win32DirName" "${APP_NAME}"
+  setpath "product" "win32MutexName" "${APP_NAME_LC}"
+  setpath "product" "win32NameVersion" "${APP_NAME}"
+  setpath "product" "win32RegValueName" "${APP_NAME}"
+  setpath "product" "win32ShellNameShort" "${APP_NAME}"
   setpath "product" "win32AppId" "{{763CBF88-25C6-4B10-952F-326AE657F16B}"
   setpath "product" "win32x64AppId" "{{88DA3577-054F-4CA1-8122-7D820494CFFB}"
   setpath "product" "win32arm64AppId" "{{67DEE444-3D04-4258-B92A-BC1F0FF2CAE4}"
@@ -185,17 +185,17 @@ cp package.json{,.bak}
 setpath "package" "version" "$( echo "${RELEASE_VERSION}" | sed -n -E "s/^(.*)\.([0-9]+)(-insider)?$/\1/p" )"
 setpath "package" "release" "$( echo "${RELEASE_VERSION}" | sed -n -E "s/^(.*)\.([0-9]+)(-insider)?$/\2/p" )"
 
-replace 's|Microsoft Corporation|VSCodium|' package.json
+replace 's|Microsoft Corporation|PostHog Inc.|' package.json
 
 # announcements
 replace "s|\\[\\/\\* BUILTIN_ANNOUNCEMENTS \\*\\/\\]|$( tr -d '\n' < ../announcements-builtin.json )|" src/vs/workbench/contrib/welcomeGettingStarted/browser/gettingStarted.ts
 
 ../undo_telemetry.sh
 
-replace 's|Microsoft Corporation|VSCodium|' build/lib/electron.js
-replace 's|Microsoft Corporation|VSCodium|' build/lib/electron.ts
-replace 's|([0-9]) Microsoft|\1 VSCodium|' build/lib/electron.js
-replace 's|([0-9]) Microsoft|\1 VSCodium|' build/lib/electron.ts
+replace 's|Microsoft Corporation|PostHog Inc.|' build/lib/electron.js
+replace 's|Microsoft Corporation|PostHog Inc.|' build/lib/electron.ts
+replace 's|([0-9]) Microsoft|\1 PostHog Inc.|' build/lib/electron.js
+replace 's|([0-9]) Microsoft|\1 PostHog Inc.|' build/lib/electron.ts
 
 if [[ "${OS_NAME}" == "linux" ]]; then
   # microsoft adds their apt repo to sources
