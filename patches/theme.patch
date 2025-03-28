@@ -1,0 +1,11 @@
+diff --git c/src/vs/workbench/services/themes/common/workbenchThemeService.ts i/src/vs/workbench/services/themes/common/workbenchThemeService.ts
+index 4154648..07cd822 100644
+--- c/src/vs/workbench/services/themes/common/workbenchThemeService.ts
++++ i/src/vs/workbench/services/themes/common/workbenchThemeService.ts
+@@ -41,4 +41,4 @@ export enum ThemeSettings {
+ export enum ThemeSettingDefaults {
+-	COLOR_THEME_DARK = 'Default Dark Modern',
+-	COLOR_THEME_LIGHT = 'Default Light Modern',
++	COLOR_THEME_DARK = 'PostHog Dark',
++	COLOR_THEME_LIGHT = 'PostHog Light',
+ 	COLOR_THEME_HC_DARK = 'Default High Contrast',
