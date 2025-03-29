@@ -121,40 +121,6 @@ setpath "product" "reportIssueUrl" "https://github.com/${GH_REPO_PATH}/issues/ne
 setpath "product" "requestFeatureUrl" "https://go.microsoft.com/fwlink/?LinkID=533482"
 setpath "product" "tipsAndTricksUrl" "https://go.microsoft.com/fwlink/?linkid=852118"
 setpath "product" "twitterUrl" "https://go.microsoft.com/fwlink/?LinkID=533687"
-setpath_json "product" "builtInExtensions" '[
-  {
-    "name": "PostHog",
-    "version": "1.1.0",
-    "sha256": "d1763fb04567dd22f3e298507235c43280ca86f5f2a582906a489201eb0300e4",
-    "repo": "https://github.com/PostHog/posthog-extension",
-    "metadata": {
-      "id": "00000000-0000-0000-0000-000000000000",
-      "publisherId": {
-        "publisherId": "00000000-0000-0000-0000-000000000000",
-        "publisherName": "posthog",
-        "displayName": "PostHog",
-        "flags": "verified"
-      },
-      "publisherDisplayName": "PostHog"
-    }
-  },
-  {
-    "name": "Cline",
-    "version": "3.8.4",
-    "sha256": "e76fe9add70094bcea6660983224bb113dbd7846cbb4e837e4a5a8fd6a6a470f",
-    "repo": "https://github.com/cline/cline",
-    "metadata": {
-      "id": "00000000-0000-0000-0000-000000000001",
-      "publisherId": {
-        "publisherId": "00000000-0000-0000-0000-000000000001",
-        "publisherName": "saoudrizwan",
-        "displayName": "saoudrizwan",
-        "flags": "verified"
-      },
-      "publisherDisplayName": "saoudrizwan"
-    }
-  }
-]'
 
 if [[ "${DISABLE_UPDATE}" != "yes" ]]; then
   setpath "product" "updateUrl" "https://raw.githubusercontent.com/${GH_REPO_PATH}/refs/heads/master"
