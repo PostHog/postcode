@@ -5,10 +5,10 @@
 # to run with Bash: "C:\Program Files\Git\bin\bash.exe" ./dev/build.sh
 ###
 
-export APP_NAME="PostCode"
-export BINARY_NAME="postcode"
+export APP_NAME="CodeHog"
+export BINARY_NAME="codehog"
 export CI_BUILD="no"
-export GH_REPO_PATH="PostHog/postcode"
+export GH_REPO_PATH="PostHog/codehog"
 export ORG_NAME="PostHog"
 export SHOULD_BUILD="yes"
 export SKIP_ASSETS="yes"
